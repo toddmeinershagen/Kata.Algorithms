@@ -5,7 +5,7 @@ using Magnum;
 
 namespace Kata.Algorithms.Sorting
 {
-	public class IterativeBucketSorter : ISorter
+	public class IterativeYieldingBucketSorter : ISorter
 	{
 		public IEnumerable<int> Sort(IEnumerable<int> list)
 		{
@@ -13,7 +13,11 @@ namespace Kata.Algorithms.Sorting
 
 			if (list.Count() <= 1)
 			{
-				return list;
+				foreach (var item in list)
+				{
+					yield return item;
+				}
+				yield break;
 			}
 
 			var max = 0;
@@ -23,31 +27,28 @@ namespace Kata.Algorithms.Sorting
 					max = item;
 			}
 
-			var bucket = new List<int>[max];
+			var results = new List<int>[max];
 			foreach (var item in list)
 			{
 				var index = item - 1;
-				if (bucket[index] == null)
+				if (results[index] == null)
 				{
-					bucket[index] = new List<int>();
+					results[index] = new List<int>();
 				}
 
-				bucket[item - 1].Add(item);
+				results[item - 1].Add(item);
 			}
 
-			var results = new List<int>();
-			foreach (var result in bucket)
+			foreach (var result in results)
 			{
 				if (result != null && result.Count != 0)
 				{
 					foreach (var item in result)
 					{
-						results.Add(item);
+						yield return item;
 					}
 				}
 			}
-
-			return results;
 		}
 	}
 }

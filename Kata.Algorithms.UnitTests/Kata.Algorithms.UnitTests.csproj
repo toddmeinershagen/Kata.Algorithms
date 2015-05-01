@@ -52,7 +52,7 @@
   <ItemGroup>
     <Compile Include="Palindrome\PalindromeValidatorTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sorting\BucketSorterTests.cs" />
+    <Compile Include="Sorting\SorterTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
