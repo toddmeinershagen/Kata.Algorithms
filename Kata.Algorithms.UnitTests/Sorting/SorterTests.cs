@@ -52,7 +52,7 @@ namespace Kata.Algorithms.UnitTests.Sorting
 			var timer = new Stopwatch();
 			timer.Start();
 
-			Enumerable.Range(0, 1000000).ToList().ForEach(index => _sorter.Sort(list));
+			Enumerable.Range(0, 1000000).ToList().ForEach(index => _sorter.Sort(list).ToList());
 
 			timer.Stop();
 
