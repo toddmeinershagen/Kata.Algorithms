@@ -5,9 +5,9 @@ using Magnum;
 
 namespace Kata.Algorithms.Sorting
 {
-	public class IterativeBucketSorter
+	public class IterativeBucketSorter : ISorter
 	{
-		public IEnumerable<int> Sort(int[] list)
+		public IEnumerable<int> Sort(IEnumerable<int> list)
 		{
 			Guard.AgainstNull(list, "list");
 

@@ -51,6 +51,7 @@
     <Compile Include="Palindrome\IterativePalindromeValidator.cs" />
     <Compile Include="Palindrome\RecursivePalindromeValidator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sorting\ISorter.cs" />
     <Compile Include="Sorting\IterativeBucketSorter.cs" />
   </ItemGroup>
   <ItemGroup>

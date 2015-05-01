@@ -10,7 +10,7 @@ using NUnit.Framework;
 namespace Kata.Algorithms.UnitTests.Sorting
 {
 	[TestFixture(typeof(IterativeBucketSorter))]
-	public class BucketSorterTests<TSorter> 
+	public class SorterTests<TSorter> 
 		where TSorter : ISorter, new()
 	{
 		private TSorter _sorter;
