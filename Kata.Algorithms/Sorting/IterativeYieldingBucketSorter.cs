@@ -5,6 +5,12 @@ using Magnum;
 
 namespace Kata.Algorithms.Sorting
 {
+	/// <summary>
+	/// This is the yielding version of the bucket sort.
+	/// </summary>
+	/// <remarks>
+	/// You must either iterate or call .ToList() on the result to get the operation to perform.
+	/// </remarks>
 	public class IterativeYieldingBucketSorter : ISorter
 	{
 		public IEnumerable<int> Sort(IEnumerable<int> list)

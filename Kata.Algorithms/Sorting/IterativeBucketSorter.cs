@@ -5,6 +5,13 @@ using Magnum;
 
 namespace Kata.Algorithms.Sorting
 {
+	/// <summary>
+	/// Bucket sort is O(n) complexity
+	/// </summary>
+	/// <remarks>
+	/// Technique works well with positive integers.  However, it does require handling duplicates and discovering what the max number is in order 
+	/// to create a bucket with enough slots to sort.
+	/// </remarks>
 	public class IterativeBucketSorter : ISorter
 	{
 		public IEnumerable<int> Sort(IEnumerable<int> list)
