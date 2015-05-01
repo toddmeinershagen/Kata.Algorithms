@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kata.Algorithms", "Kata.Algorithms\Kata.Algorithms.csproj", "{149E0DCE-3EFA-49EF-99A1-A33B2CB024D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kata.Algorithms.UnitTests", "Kata.Algorithms.UnitTests\Kata.Algorithms.UnitTests.csproj", "{A209DCE2-D2BD-47B2-AB31-7E9C06D79E0C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{C2090603-5B31-4D1E-B651-135DF7FF40D9}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{149E0DCE-3EFA-49EF-99A1-A33B2CB024D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{149E0DCE-3EFA-49EF-99A1-A33B2CB024D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{149E0DCE-3EFA-49EF-99A1-A33B2CB024D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{149E0DCE-3EFA-49EF-99A1-A33B2CB024D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A209DCE2-D2BD-47B2-AB31-7E9C06D79E0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A209DCE2-D2BD-47B2-AB31-7E9C06D79E0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A209DCE2-D2BD-47B2-AB31-7E9C06D79E0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A209DCE2-D2BD-47B2-AB31-7E9C06D79E0C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
