@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Diagnostics;
 using System.Linq;
 
 using FluentAssertions;
@@ -12,6 +11,8 @@ namespace Kata.Algorithms.UnitTests.Sorting
 {
 	[TestFixture(typeof(IterativeBucketSorter))]
 	[TestFixture(typeof(IterativeYieldingBucketSorter))]
+	[TestFixture(typeof(RecursiveBubbleSorter))]
+	[DisplayExecutionTime]
 	public class SorterTests<TSorter> 
 		where TSorter : ISorter, new()
 	{
@@ -48,15 +49,7 @@ namespace Kata.Algorithms.UnitTests.Sorting
 		public void given_sorter_and_list_when_sorting_a_million_times_should_display_total_run_time()
 		{
 			var list = new[] { 4, 1, 4, 7, 2, 10, 1, 7, 4, 1, 4, 7, 2, 10, 1, 7, 4, 1, 4, 7, 2, 10, 1, 7, 4, 1, 4, 7, 2, 10, 1, 7 };
-
-			var timer = new Stopwatch();
-			timer.Start();
-
 			Enumerable.Range(0, 1000000).ToList().ForEach(index => _sorter.Sort(list).ToList());
-
-			timer.Stop();
-
-			Debug.WriteLine("{0} - {1} second(s)", typeof(TSorter).Name, timer.Elapsed.TotalSeconds);
 		}
 	}
 }

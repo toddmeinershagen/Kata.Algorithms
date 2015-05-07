@@ -8,6 +8,7 @@ namespace Kata.Algorithms.UnitTests.Palindrome
 {
 	[TestFixture(typeof(IterativePalindromeValidator))]
 	[TestFixture(typeof(RecursivePalindromeValidator))]
+	[DisplayExecutionTime]
     public class PalindromeValidatorTests<TValidator> 
 		where TValidator : IPalindromeValidator, new()
 	{
