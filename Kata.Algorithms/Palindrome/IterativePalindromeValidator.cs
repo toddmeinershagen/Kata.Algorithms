@@ -14,19 +14,14 @@ namespace Kata.Algorithms.Palindrome
 
 			for (int i = 0; i < value.Length; i++)
 			{
-				if (IsOddLength(value) && (i == Math.Round((double) value.Length/2)))
+                if (i >= value.Length/2)
 					break;
 
-				if (Char.ToLower(value[i]) != Char.ToLower(value[value.Length - 1 - i]))
+				if (char.ToUpperInvariant(value[i]).Equals(char.ToUpperInvariant(value[value.Length - 1 - i])) == false)
 					return false;
 			}
 
 			return true;
-		}
-
-		private static bool IsOddLength(string value)
-		{
-			return value.Length % 2 != 0;
 		}
 	}
 }
